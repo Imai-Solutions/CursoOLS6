@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+/* PRACTICAS DEL CURSO [OLS6] DESARROLLO DE APLICAICONES MÓVILES AVANZADO EN ANDROID
+   AUTOR: Imai Solutions - Advanced Research Systems S.L.
+ */
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -19,9 +22,11 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
+            // CARGA DEL FRAGMENTO CON SUPPORT LIBRARY
+           /* getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, new PlaceholderFragment())
+                .commit();
+           */
         }
     }
 
@@ -49,6 +54,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
+    /*
     public static class PlaceholderFragment extends Fragment {
 
         public PlaceholderFragment() {
@@ -61,5 +67,6 @@ public class MainActivity extends ActionBarActivity {
             return rootView;
         }
     }
+    */
 
 }
