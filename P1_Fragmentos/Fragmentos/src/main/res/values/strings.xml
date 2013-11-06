@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Fragmentos</string>
+    <string name="mensaje_fragmento">[FRAGMENTO] Evento Click - Botón</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 

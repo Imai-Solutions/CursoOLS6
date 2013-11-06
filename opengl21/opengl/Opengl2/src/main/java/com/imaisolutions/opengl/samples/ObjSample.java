@@ -35,7 +35,7 @@ public class ObjSample extends GameActivity implements GameListener
 	{			
 		try {
 			//mesh = MeshLoader.loadObj( gl, getAssets().open( "ship.obj" ) );
-            mesh = MeshLoader.loadObj( gl, getAssets().open( "sws.obj" ) );
+            mesh = MeshLoader.loadObj( gl, getAssets().open( "drone2.obj" ) );
 			//Bitmap bitmap = BitmapFactory.decodeStream( getAssets().open( "ship.png" ) );
 			//texture = new Texture( gl, bitmap, TextureFilter.Linear, TextureFilter.Linear, TextureWrap.ClampToEdge, TextureWrap.ClampToEdge );
 			//bitmap.recycle();
