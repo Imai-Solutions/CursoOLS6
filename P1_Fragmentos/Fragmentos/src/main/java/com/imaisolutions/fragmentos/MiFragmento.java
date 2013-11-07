@@ -18,6 +18,7 @@ import java.util.GregorianCalendar;
 public class MiFragmento extends Fragment  {
     Button btn;
     TextView lblMensaje;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.mifragmento, container, false);

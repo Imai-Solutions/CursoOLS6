@@ -1,4 +1,4 @@
-package com.imaisolutions.fragmentos;
+package com.imaisolutions.fragmentos.main;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+
+import com.imaisolutions.fragmentos.R;
 
 /* PRACTICAS DEL CURSO [OLS6] DESARROLLO DE APLICAICONES MÓVILES AVANZADO EN ANDROID
    AUTOR: Imai Solutions - Advanced Research Systems S.L.

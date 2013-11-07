@@ -14,8 +14,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.imaisolutions.fragmentos.MainActivity"
+            android:name=".main.MainActivity"
             android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".main.CargadorDinamicoFragmentos"
+            android:label="@string/titulo_acdf" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
