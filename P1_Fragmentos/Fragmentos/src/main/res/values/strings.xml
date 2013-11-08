@@ -3,11 +3,14 @@
 
     <string name="app_name">Fragmentos</string>
     <string name="mensaje_fragmento">[FRAGMENTO] Evento Click - Botón</string>
+    <string name="nuevofragmento">Nuevo Fragmento</string>
     <string name="titulofragmento">TITULO</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="titulo_acdf">Cargador Fragmentos</string>
-    <string name="action_anadir">Añadir Fragmento</string>
-    <string name="action_quitar">Quitar Último</string>
-
+    <string name="action_settings">Settings</string>
+    <string name="action_anadir">Añadir</string>
+    <string name="action_quitar">Quitar</string>
+    <string name="action_reemplazar">Reemplazar</string>
+    <string name="action_pilafr">Pila Fragmentos</string>
+    <string name="action_volverBackStack">Atrás</string>
+    <string name="hello_world">Hello world!</string>
 </resources>

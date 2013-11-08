@@ -8,9 +8,22 @@
         android:orderInCategory="100"
         android:icon="@android:drawable/ic_input_add"
         app:showAsAction="always" />
-    <item android:id="@+id/quitarultimo"
+    <item android:id="@+id/quitar"
         android:title="@string/action_quitar"
         android:orderInCategory="100"
         android:icon="@android:drawable/ic_delete"
         app:showAsAction="always" />
+    <item android:id="@+id/reemplazar"
+        android:title="@string/action_reemplazar"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_popup_sync"
+        app:showAsAction="always" />
+    <item android:id="@+id/lanzarpilafragmentos"
+        android:title="@string/action_reemplazar"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/popBackStack"
+        android:title="@string/action_volverBackStack"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
 </menu>
