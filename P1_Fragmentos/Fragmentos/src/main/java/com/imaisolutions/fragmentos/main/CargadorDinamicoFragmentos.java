@@ -83,7 +83,6 @@ public class CargadorDinamicoFragmentos extends ActionBarActivity {
                 {
                     fragmentManager = getFragmentManager();
                     fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out);
 
                     MiFragmento f1=new MiFragmento();
                     // Parámetros del fragmento.
@@ -106,6 +105,7 @@ public class CargadorDinamicoFragmentos extends ActionBarActivity {
 
                     fragmentTransaction.commit();
                     pilaFragmentos.push(f1);
+
                 }
                 break;
 

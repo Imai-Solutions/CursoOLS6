@@ -1,5 +1,6 @@
 package com.imaisolutions.fragmentos;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -50,8 +51,7 @@ public class MiFragmento extends Fragment  {
         });
 
         lblMensaje.setText("FR#" + numFr + ":" +  msj);
-
-        return v;
+       return v;
     }
 
     @Override
