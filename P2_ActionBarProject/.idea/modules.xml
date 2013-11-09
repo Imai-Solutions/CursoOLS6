@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/P2.1_ActionBarSupport/P2.1_ActionBarSupport.iml" filepath="$PROJECT_DIR$/P2.1_ActionBarSupport/P2.1_ActionBarSupport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P2_ActionBar/P2_ActionBar.iml" filepath="$PROJECT_DIR$/P2_ActionBar/P2_ActionBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P2_ActionBarProject.iml" filepath="$PROJECT_DIR$/P2_ActionBarProject.iml" />
+    </modules>
+  </component>
+</project>
+

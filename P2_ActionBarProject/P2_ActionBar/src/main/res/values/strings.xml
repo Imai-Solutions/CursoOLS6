@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">P2_ActionBar</string>
+    <string name="hello_world_f1">Hola Fragmento1!</string>
+    <string name="hello_world_f2">Hola Fragmento2!</string>
+    <string name="action_settings">Preferencias</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_save">Guardar</string>
+</resources>
