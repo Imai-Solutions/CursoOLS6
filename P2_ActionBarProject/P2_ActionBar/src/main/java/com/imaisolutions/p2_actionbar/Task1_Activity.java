@@ -6,10 +6,12 @@ import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.ShareActionProvider;
 import android.widget.TextView;
 
 import java.util.List;
@@ -37,6 +39,7 @@ public class Task1_Activity  extends Activity implements SearchView.OnQueryTextL
 
     }
 
+    private ShareActionProvider mShareActionProvider;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.task1_menu, menu);
@@ -48,8 +51,22 @@ public class Task1_Activity  extends Activity implements SearchView.OnQueryTextL
 
         configurarSearchView();
 
+        MenuItem shareItem = menu.findItem(R.id.action_share);
+        mShareActionProvider = (ShareActionProvider)shareItem.getActionProvider();
+        //Con Support: reemplazar por
+        // (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
+
+        mShareActionProvider.setShareIntent(getShareIntent());
         return true;
     }
+
+    public Intent getShareIntent(){
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "News for you!");
+        return  intent;
+    }
+
 
     private void configurarSearchView() {
       SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);

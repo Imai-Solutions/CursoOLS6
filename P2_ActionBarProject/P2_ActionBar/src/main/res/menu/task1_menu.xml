@@ -6,4 +6,11 @@
         android:icon="@android:drawable/ic_menu_search"
         android:showAsAction="ifRoom|collapseActionView"
         android:actionViewClass="android.widget.SearchView" />
+
+     <item android:id="@+id/action_share"
+         android:title="@string/action_share"
+         android:showAsAction="ifRoom"
+         android:actionProviderClass="android.widget.ShareActionProvider"
+     />
+
 </menu>
