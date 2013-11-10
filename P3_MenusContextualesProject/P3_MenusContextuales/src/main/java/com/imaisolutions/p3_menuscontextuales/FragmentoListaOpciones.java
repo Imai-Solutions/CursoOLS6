@@ -20,7 +20,7 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
  */
 public class FragmentoListaOpciones extends ListFragment{
 
-    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+    String[] listavalores = new String[] { "Android", "iPhone", "WindowsMobile",
           "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
           "Linux", "OS/2" };
 
@@ -29,7 +29,7 @@ public class FragmentoListaOpciones extends ListFragment{
         super.onActivityCreated(savedInstanceState);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, values);
+                android.R.layout.simple_list_item_1, listavalores);
         setListAdapter(adapter);
         this.registerForContextMenu(getListView());
     }
@@ -50,15 +50,15 @@ public class FragmentoListaOpciones extends ListFragment{
         switch(item.getItemId()){
             case R.id.action_edit:
                 Toast.makeText(this.getActivity(),
-                        "Editar : " + values[info.position], Toast.LENGTH_SHORT).show();
+                        "Editar : " + listavalores[info.position], Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_delete:
                 Toast.makeText(this.getActivity(), 
-                        "Borrar : " + values[info.position]  , Toast.LENGTH_SHORT).show();
+                        "Borrar : " + listavalores[info.position]  , Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_share:
                 Toast.makeText(this.getActivity(),
-                        "Compartir: " + values[info.position]  , Toast.LENGTH_SHORT).show();
+                        "Compartir: " + listavalores[info.position]  , Toast.LENGTH_SHORT).show();
                 break;
 
         }
