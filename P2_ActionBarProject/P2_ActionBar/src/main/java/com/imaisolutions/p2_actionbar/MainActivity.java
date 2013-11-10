@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceHolderFragment(R.layout.fragment_f1))
+                    .add(R.id.container, new PlaceHolderFragment(R.layout.fragment_f1),"FR1")
                     .commit();
         }
     }

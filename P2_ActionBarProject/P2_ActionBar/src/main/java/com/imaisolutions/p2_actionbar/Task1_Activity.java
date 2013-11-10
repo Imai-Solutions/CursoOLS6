@@ -33,10 +33,7 @@ public class Task1_Activity  extends Activity implements SearchView.OnQueryTextL
             getFragmentManager().beginTransaction()
                     .add(R.id.container, (Fragment)fr,"FR2")
                     .commit();
-            }
-
-
-
+        }
     }
 
     private ShareActionProvider mShareActionProvider;
@@ -57,13 +54,17 @@ public class Task1_Activity  extends Activity implements SearchView.OnQueryTextL
         // (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
 
         mShareActionProvider.setShareIntent(getShareIntent());
+
+        MenuItem customActionProviderItem = menu.findItem(R.id.action_share);
+
+
         return true;
     }
 
     public Intent getShareIntent(){
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, "News for you!");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Ejemplo compartir información!");
         return  intent;
     }
 

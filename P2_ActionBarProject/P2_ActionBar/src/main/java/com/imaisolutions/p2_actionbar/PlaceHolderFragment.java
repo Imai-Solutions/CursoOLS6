@@ -12,18 +12,35 @@ import android.widget.TextView;
  */
 public class PlaceHolderFragment extends Fragment {
         int _id;
+        final String _KEYID="ID";
         public PlaceHolderFragment(int id) {
             _id=id;
         }
 
-        @Override
+        public PlaceHolderFragment(){
+        }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState!=null)
+            _id =savedInstanceState.getInt(_KEYID);
+    }
+
+    @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(_id, container, false);
             return rootView;
         }
 
-        public void setText(String text){
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(_KEYID,_id);
+    }
+
+    public void setText(String text){
             TextView lbl=(TextView)this.getView().findViewById(R.id.lblres);
             lbl.setText(text);
         }

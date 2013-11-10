@@ -7,4 +7,5 @@
     <string name="action_search">Buscar</string>
     <string name="action_save">Guardar</string>
     <string name="action_share">Compartir</string>
+    <string name="action_custom">Personalizado</string>
 </resources>

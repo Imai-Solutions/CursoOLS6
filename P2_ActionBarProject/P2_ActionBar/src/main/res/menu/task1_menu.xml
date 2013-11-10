@@ -9,8 +9,15 @@
 
      <item android:id="@+id/action_share"
          android:title="@string/action_share"
-         android:showAsAction="ifRoom"
+         android:showAsAction="always"
          android:actionProviderClass="android.widget.ShareActionProvider"
+     />
+
+    <item android:id="@+id/action_custom"
+        android:title="@string/action_custom"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_input_add"
+        android:actionProviderClass="com.imaisolutions.p2_actionbar.actionbar.CustomActionProvider"
      />
 
 </menu>
