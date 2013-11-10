@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">P3_MenusContextuales</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="editar">Editar</string>
+    <string name="compartir">Compartir</string>
+    <string name="delete">Borrar</string>
+
+</resources>
