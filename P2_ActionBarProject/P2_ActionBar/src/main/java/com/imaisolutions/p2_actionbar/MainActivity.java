@@ -1,20 +1,17 @@
 package com.imaisolutions.p2_actionbar;
 
 import android.app.Activity;
+import android.app.ActionBar.*;
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.SearchManager;
-import android.app.SearchableInfo;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
-import android.widget.SearchView;
+
+import com.imaisolutions.p2_actionbar.actionbar.*;
+import com.imaisolutions.p2_actionbar.actionbar.TabListener;
+import com.imaisolutions.p2_actionbar.fragmentos.f1;
+import com.imaisolutions.p2_actionbar.fragmentos.f2;
 
 public class MainActivity extends Activity {
 
@@ -23,11 +20,27 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceHolderFragment(R.layout.fragment_f1),"FR1")
-                    .commit();
-        }
+        // ESTABLECEMOS EL MODO DE NAVEGACIÓN
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.setDisplayShowTitleEnabled(true);
+
+        // AÑADIR LOS TABS
+        Tab tab1 = actionBar.newTab()
+                .setText(R.string.hello_world_f1)
+                .setTabListener(
+                         new TabListener<f1> (this, "FR1", f1.class)
+                 );
+        actionBar.addTab(tab1);
+
+        Tab tab2 = actionBar.newTab()
+                .setText(R.string.hello_world_f2)
+                .setTabListener(
+                        new TabListener<f2>
+                                (this, "FR2", f2.class)
+                );
+        actionBar.addTab(tab2);
+
     }
 
 

@@ -11,7 +11,7 @@ import android.widget.TextView;
  * Created by jesus_000 on 9/11/13.
  */
 public class PlaceHolderFragment extends Fragment {
-        int _id;
+        protected int _id;
         final String _KEYID="ID";
         public PlaceHolderFragment(int id) {
             _id=id;
