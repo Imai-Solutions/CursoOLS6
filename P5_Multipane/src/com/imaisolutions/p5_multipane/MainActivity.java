@@ -22,7 +22,6 @@ import android.support.v4.app.FragmentTransaction;
 public class MainActivity extends FragmentActivity 
         implements HeadlinesFragment.OnHeadlineSelectedListener {
 
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
