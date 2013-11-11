@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ActividadSeleccion extends ActionBarActivity
-            implements android.widget.AdapterView.OnItemClickListener {
+       implements android.widget.AdapterView.OnItemClickListener {
 
     ListView soListView;
     AdaptadorSistemasOperativos adaptadorSO;
@@ -52,14 +52,14 @@ public class ActividadSeleccion extends ActionBarActivity
         boolean hasCheckedItems = adaptadorSO.getNumeroElementosSeleccionados() > 0;
 
         if (hasCheckedItems && mActionMode == null)
-            // Si seleccionamos un elemento , iniciamos el ActionMode
+        // Si seleccionamos un elemento , iniciamos el ActionMode
         {
             ActionModeCallBack callbacks = new ActionModeCallBack(adaptadorSO, mActionMode);
             mActionMode = startSupportActionMode(callbacks);
         }
         else if (!hasCheckedItems && mActionMode != null)
         {
-            // Si no hay elementos selccionamos terminamos el modo de trabajo
+        // Si no hay elementos seleccionamos terminamos el modo de trabajo
             mActionMode.finish();
         }
         if (mActionMode != null)

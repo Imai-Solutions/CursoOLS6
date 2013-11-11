@@ -34,7 +34,7 @@ public class ActionModeCallBack implements ActionMode.Callback {
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete:
-                // retrieve selected items and delete them out
+                // recogemos los elementos seleccionados y los borramos.
                 SparseBooleanArray selected = mAdaptadorSO.getSelectedIds();
                 for (int i = (selected.size() - 1); i >= 0; i--) {
                     if (selected.valueAt(i)) {
@@ -42,7 +42,7 @@ public class ActionModeCallBack implements ActionMode.Callback {
                         mAdaptadorSO.remove(selectedItem);
                     }
                 }
-                mode.finish(); // Action picked, so close the CAB
+                mode.finish(); // Acción realizada, cerramos la CAB
                 return true;
             default:
                 return false;
@@ -51,7 +51,7 @@ public class ActionModeCallBack implements ActionMode.Callback {
 
     @Override
     public void onDestroyActionMode(ActionMode mode) {
-        // remove selection
+        // quitamos la selección.
         mAdaptadorSO.quitarSeleccion();
         mModo= null;
     }
