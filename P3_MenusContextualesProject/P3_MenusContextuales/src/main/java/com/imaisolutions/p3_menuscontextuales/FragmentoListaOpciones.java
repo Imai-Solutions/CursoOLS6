@@ -65,5 +65,4 @@ public class FragmentoListaOpciones extends ListFragment{
         return true;
     }
 
-
 }
