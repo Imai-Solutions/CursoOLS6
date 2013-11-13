@@ -1,7 +1,7 @@
 package com.imaisolutions.mvpejemplo.model;
 
-import com.imaisolutions.mvpejemplo.model.entities.Customer;
-import com.imaisolutions.mvpejemplo.model.datalayer.*;
+        import com.imaisolutions.mvpejemplo.model.entities.Customer;
+        import com.imaisolutions.mvpejemplo.model.datalayer.*;
 
 /**
  * CustomerModel

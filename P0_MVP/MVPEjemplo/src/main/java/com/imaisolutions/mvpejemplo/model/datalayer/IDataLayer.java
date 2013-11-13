@@ -1,9 +1,9 @@
 package com.imaisolutions.mvpejemplo.model.datalayer;
 
-import com.imaisolutions.mvpejemplo.model.entities.Customer;
+        import com.imaisolutions.mvpejemplo.model.entities.Customer;
 
 /**
- * Created by jsc on 12/11/13.
+ * Interfaz DataLayer
  */
 public interface IDataLayer {
     public Customer getClient(int id);
