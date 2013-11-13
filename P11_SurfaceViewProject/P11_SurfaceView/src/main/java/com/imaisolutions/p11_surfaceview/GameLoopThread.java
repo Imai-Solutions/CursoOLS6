@@ -6,6 +6,9 @@ import android.graphics.Canvas;
  * Created by jsc on 13/11/13.
  */
 public class GameLoopThread extends Thread {
+    static final long FPS = 30;
+    static final int xspeed=10;
+
     private GameView view;
     private GameState e;
     private GameLogic gl;
@@ -22,15 +25,21 @@ public class GameLoopThread extends Thread {
 
     @Override
     public void run() {
+        long ticksPS = 1000 / FPS;
+        long startTime;
+        long sleepTime;
+
         // INICIALIZAMOS JUEGO
         gl=new GameLogic(e,view.getTope());
 
         // COMENZAMOS BUCLE
         while (running) {
+            startTime = System.currentTimeMillis();
+
             // 1. RECIBIMOS ENTRADAS.
 
             // 2. ACTUALIZAMOS MUNDO
-            gl.Desplaza(1);
+            gl.Desplaza(xspeed);
 
             // 3. DIBUJAMOS
             Canvas c = null;
@@ -44,6 +53,16 @@ public class GameLoopThread extends Thread {
                     view.getHolder().unlockCanvasAndPost(c);
                 }
             }
+
+            // PAUSA SEGÚN FPS
+            sleepTime = ticksPS-(System.currentTimeMillis() - startTime);
+            try {
+                if (sleepTime > 0)
+                    sleep(sleepTime);
+                else
+                    sleep(10);
+            } catch (Exception e) {}
+
         }
     }
 }

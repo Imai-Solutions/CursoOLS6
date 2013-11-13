@@ -63,11 +63,13 @@ public class MainActivity extends ActionBarActivity {
                         // Do nothing
                         break;
                     case DragEvent.ACTION_DRAG_ENTERED:
+                        // Entrada
                         Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENTERED");
                         int x_cord = (int) event.getX();
                         int y_cord = (int) event.getY();
                         break;
                     case DragEvent.ACTION_DRAG_EXITED :
+                        //Salida
                         Log.d(msg, "Action is DragEvent.ACTION_DRAG_EXITED");
                         x_cord = (int) event.getX();
                         y_cord = (int) event.getY();
