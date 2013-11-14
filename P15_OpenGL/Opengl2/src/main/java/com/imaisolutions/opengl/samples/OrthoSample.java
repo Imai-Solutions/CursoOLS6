@@ -1,0 +1,44 @@
+package com.imaisolutions.opengl.samples;
+
+import javax.microedition.khronos.opengles.GL10;
+
+import android.opengl.GLU;
+import android.os.Bundle;
+
+import com.imaisolutions.opengl.tools.GameActivity;
+import com.imaisolutions.opengl.tools.GameListener;
+import com.imaisolutions.opengl.tools.Mesh;
+import com.imaisolutions.opengl.tools.Mesh.PrimitiveType;
+
+public class OrthoSample extends GameActivity implements GameListener
+{
+	Mesh mesh;	
+	
+	public void onCreate( Bundle bundle )
+	{
+		super.onCreate( bundle );
+		setGameListener( this );
+	}
+
+	@Override
+	public void setup(GameActivity activity, GL10 gl) 
+	{	
+		mesh = new Mesh( gl, 3, false, false, false );
+		mesh.vertex( 0, 0, 0 );
+		mesh.vertex( 50, 0, 0 );
+		mesh.vertex( 25, 50, 0 );			
+	}
+	
+	@Override
+	public void mainLoopIteration(GameActivity activity, GL10 gl) 
+	{	
+		gl.glViewport( 0, 0, activity.getViewportWidth(), activity.getViewportHeight() );
+		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		
+		gl.glMatrixMode(GL10.GL_PROJECTION);
+		gl.glLoadIdentity();
+		GLU.gluOrtho2D(gl, 0, activity.getViewportWidth(), 0, activity.getViewportHeight() );
+		
+		mesh.render(PrimitiveType.Triangles);
+	}
+}
