@@ -1,15 +1,11 @@
 package com.imaisolutions.p12_surfaceviewysprites;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
 /**
  * Created by jsc on 13/11/13.
  */
 public class GameLogic {
     GameState e;
     GameView v;
-    private Bitmap bmp;
 
     public GameLogic(GameView V,GameState E){
         e=E;
@@ -18,11 +14,27 @@ public class GameLogic {
     }
 
     public void inicializar(){
-        bmp = BitmapFactory.decodeResource(v.getResources(), R.drawable.robot);
-        e.robot=new Robot(v,bmp);
+        e.robot=new Robot(v);
+        e.enemigo=new Enemigo(v);
     }
+
+    int contadorUltimaExplosion=51;
+    final int iteracionesEspera=50;
 
     public void actualizar(){
         e.robot.update();
+        e.enemigo.update();
+        for(ISprite exp:e.explosiones)
+            ((Explosion)exp).update();
+
+        if (e.robot.isCollision(e.enemigo)){
+            if (contadorUltimaExplosion>iteracionesEspera)
+            {
+                e.explosiones.add(new Explosion(v,e.robot.getX(),e.robot.getY()));
+                contadorUltimaExplosion=0;
+            }
+            else contadorUltimaExplosion++;
+        }
     }
+
 }

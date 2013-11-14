@@ -46,12 +46,21 @@ public class GameView extends SurfaceView {
         });
     }
 
+    public void quitarExplosion(ISprite explosion){
+        e.explosiones.remove(explosion);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(Color.BLACK);
         if (e!=null){
             // Representamos el estado del juego.
             e.robot.onDraw(canvas);
+            e.enemigo.onDraw(canvas);
+            for(ISprite explosion : e.explosiones)
+            {
+               explosion.onDraw(canvas);
+            }
         }
     }
 
