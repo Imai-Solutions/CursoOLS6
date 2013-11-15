@@ -39,7 +39,7 @@ public class BarraProgresoFragment extends Fragment {
             public void run() {
                 for (int i = 0; i <= 10; i++) {
                     final int value = i;
-                    doFakeWork();
+                    doWork();
                     progress.post(new Runnable() {
                         @Override
                         public void run() {
@@ -54,7 +54,7 @@ public class BarraProgresoFragment extends Fragment {
     }
 
     // Simulamos un proceso costoso.
-    private void doFakeWork() {
+    private void doWork() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
