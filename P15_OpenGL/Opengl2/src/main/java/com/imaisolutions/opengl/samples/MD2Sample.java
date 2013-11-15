@@ -1,9 +1,5 @@
 package com.imaisolutions.opengl.samples;
 
-import java.io.InputStream;
-
-import javax.microedition.khronos.opengles.GL10;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLU;
@@ -17,6 +13,10 @@ import com.imaisolutions.opengl.tools.Texture.TextureWrap;
 import com.imaisolutions.opengl.tools.md2.MD2Instance;
 import com.imaisolutions.opengl.tools.md2.MD2Loader;
 import com.imaisolutions.opengl.tools.md2.MD2Mesh;
+
+import java.io.InputStream;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class MD2Sample extends GameActivity implements GameListener
 {
@@ -67,10 +67,10 @@ public class MD2Sample extends GameActivity implements GameListener
 		gl.glMatrixMode( GL10.GL_MODELVIEW );
 		gl.glLoadIdentity();
 		GLU.gluLookAt( gl, 1, 2, 2, 0, 0, 0, 0, 1, 0 );
-		
+
 		gl.glEnable( GL10.GL_TEXTURE_2D );
 		texture.bind();		
 		instance.render( activity.getDeltaTime() );
-		
+
 	}
 }

@@ -1,7 +1,5 @@
 package com.imaisolutions.opengl.samples;
 
-import javax.microedition.khronos.opengles.GL10;
-
 import android.opengl.GLU;
 import android.os.Bundle;
 
@@ -9,6 +7,8 @@ import com.imaisolutions.opengl.tools.GameActivity;
 import com.imaisolutions.opengl.tools.GameListener;
 import com.imaisolutions.opengl.tools.Mesh;
 import com.imaisolutions.opengl.tools.Mesh.PrimitiveType;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class CameraSample extends GameActivity implements GameListener 
 {
@@ -42,20 +42,22 @@ public class CameraSample extends GameActivity implements GameListener
 	}
 	
 	@Override
-	public void mainLoopIteration(GameActivity activity, GL10 gl) 
-	{	
+	public void mainLoopIteration(GameActivity activity, GL10 gl)
+	{
 		gl.glViewport( 0, 0, activity.getViewportWidth(), activity.getViewportHeight() );
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		
+
 		gl.glMatrixMode( GL10.GL_PROJECTION );
 		gl.glLoadIdentity();
 		float aspectRatio = (float)activity.getViewportWidth() / activity.getViewportHeight();
-		GLU.gluPerspective( gl, 67, aspectRatio, 1, 100 );
+		GLU.gluPerspective( gl, 90, aspectRatio, 1, 100 );
 
 		gl.glMatrixMode( GL10.GL_MODELVIEW );
 		gl.glLoadIdentity();
-		GLU.gluLookAt( gl, 0, 0, -7, 0, 0, 0, 0, 1, 0 );
-		
+		GLU.gluLookAt( gl, 0, 1, -7, 0, 0, 0, 0, 1, 0 );
+
 		mesh.render( PrimitiveType.Triangles );
 	}
+
+
 }
