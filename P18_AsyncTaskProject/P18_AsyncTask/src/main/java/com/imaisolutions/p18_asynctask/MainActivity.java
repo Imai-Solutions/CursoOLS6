@@ -22,13 +22,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MainActivity extends ActionBarActivity {
-    private TextView textView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView=(TextView)textView.findViewById(R.id.txtSRC);
+
+        textView=(TextView)this.findViewById(R.id.txtSRC);
     }
 
     private class DownloadWebPageTask extends AsyncTask<String, Void, String> {
@@ -64,6 +65,5 @@ public class MainActivity extends ActionBarActivity {
     public void onClick(View view) {
         DownloadWebPageTask task = new DownloadWebPageTask();
         task.execute(new String[] { "http://www.imai-solutions.com" });
-
     }
 }
