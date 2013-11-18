@@ -10,6 +10,7 @@ public interface ICustomerView {
     Customer getCustomer();
 
     // Métodos auxiliares
+    // Recogida de datos
     void setLastName (String lastName);
     void setFirstName (String firstName);
     String getLastName ();

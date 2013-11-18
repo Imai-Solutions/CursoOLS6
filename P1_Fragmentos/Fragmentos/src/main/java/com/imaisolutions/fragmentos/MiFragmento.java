@@ -1,9 +1,7 @@
 package com.imaisolutions.fragmentos;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  * Created by jsc on 24/10/13.
  */
-public class MiFragmento extends Fragment  {
+public class MiFragmento extends Fragment {
     Button btn;
     TextView lblMensaje;
 

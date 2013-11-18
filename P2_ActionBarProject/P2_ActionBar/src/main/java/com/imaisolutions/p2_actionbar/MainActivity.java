@@ -1,14 +1,13 @@
 package com.imaisolutions.p2_actionbar;
 
-import android.app.Activity;
-import android.app.ActionBar.*;
 import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.imaisolutions.p2_actionbar.actionbar.*;
 import com.imaisolutions.p2_actionbar.actionbar.TabListener;
 import com.imaisolutions.p2_actionbar.fragmentos.f1;
 import com.imaisolutions.p2_actionbar.fragmentos.f2;
@@ -22,7 +21,7 @@ public class MainActivity extends Activity {
 
         // ESTABLECEMOS EL MODO DE NAVEGACIÓN
         ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS)
         actionBar.setDisplayShowTitleEnabled(true);
 
         // AÑADIR LOS TABS

@@ -7,9 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.PathEffect;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -57,6 +55,7 @@ public class GameView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         // Configuración de brochas.
+
         Paint p=new Paint();
         p.setStyle(Paint.Style.STROKE);
         p.setColor(Color.RED);
@@ -79,7 +78,6 @@ public class GameView extends View {
             canvas.drawCircle(300+i, 300+i, radio, z);
         }
 
-        canvas.drawPath(path,p);
 
         canvas.drawCircle(50,50,40,ps);
 
@@ -88,6 +86,8 @@ public class GameView extends View {
         canvas.drawText("HOLA",100,100,p);
 
         canvas.drawLine(200,200,0,400,p);
+
+        canvas.drawPath(path,p);
 
     }
 }

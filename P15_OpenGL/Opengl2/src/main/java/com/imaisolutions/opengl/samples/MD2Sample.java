@@ -69,7 +69,7 @@ public class MD2Sample extends GameActivity implements GameListener
 		GLU.gluLookAt( gl, 1, 2, 2, 0, 0, 0, 0, 1, 0 );
 
 		gl.glEnable( GL10.GL_TEXTURE_2D );
-		texture.bind();		
+        texture.bind();
 		instance.render( activity.getDeltaTime() );
 
 	}

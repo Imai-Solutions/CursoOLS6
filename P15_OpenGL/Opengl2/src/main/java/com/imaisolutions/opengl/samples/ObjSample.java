@@ -1,22 +1,18 @@
 package com.imaisolutions.opengl.samples;
 
-import java.io.IOException;
-
-import javax.microedition.khronos.opengles.GL10;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.opengl.GLU;
 import android.os.Bundle;
 
 import com.imaisolutions.opengl.tools.GameActivity;
 import com.imaisolutions.opengl.tools.GameListener;
 import com.imaisolutions.opengl.tools.Mesh;
+import com.imaisolutions.opengl.tools.Mesh.PrimitiveType;
 import com.imaisolutions.opengl.tools.MeshLoader;
 import com.imaisolutions.opengl.tools.Texture;
-import com.imaisolutions.opengl.tools.Mesh.PrimitiveType;
-import com.imaisolutions.opengl.tools.Texture.TextureFilter;
-import com.imaisolutions.opengl.tools.Texture.TextureWrap;
+
+import java.io.IOException;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class ObjSample extends GameActivity implements GameListener 
 {
@@ -35,7 +31,7 @@ public class ObjSample extends GameActivity implements GameListener
 	{			
 		try {
 			//mesh = MeshLoader.loadObj( gl, getAssets().open( "ship.obj" ) );
-            mesh = MeshLoader.loadObj( gl, getAssets().open( "drone2.obj" ) );
+            mesh = MeshLoader.loadObj( gl, getAssets().open( "drone.obj" ) );
 			//Bitmap bitmap = BitmapFactory.decodeStream( getAssets().open( "ship.png" ) );
 			//texture = new Texture( gl, bitmap, TextureFilter.Linear, TextureFilter.Linear, TextureWrap.ClampToEdge, TextureWrap.ClampToEdge );
 			//bitmap.recycle();

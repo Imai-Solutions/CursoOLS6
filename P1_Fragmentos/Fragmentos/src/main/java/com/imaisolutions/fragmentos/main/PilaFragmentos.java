@@ -1,22 +1,24 @@
 package com.imaisolutions.fragmentos.main;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.imaisolutions.fragmentos.R;
 
 /**
  * Demonstrates the use of custom animations in a FragmentTransaction when
  * pushing and popping a stack.
  */
-public class PilaFragmentos extends Activity {
+public class PilaFragmentos extends ActionBarActivity {
     int mStackLevel = 1;
 
     @Override
@@ -35,7 +37,7 @@ public class PilaFragmentos extends Activity {
         if (savedInstanceState == null) {
             // Do first time initialization -- add initial fragment.
             Fragment newFragment = CountingFragment.newInstance(mStackLevel);
-            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.simple_fragment, newFragment).commit();
         } else {
             mStackLevel = savedInstanceState.getInt("level");
@@ -56,11 +58,11 @@ public class PilaFragmentos extends Activity {
         Fragment newFragment = CountingFragment.newInstance(mStackLevel);
 
         // Añadimos el fragmento y lo apilamos en el backstack
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.setCustomAnimations(R.anim.fragment_slide_left_enter,
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        /*ft.setCustomAnimations(R.anim.fragment_slide_left_enter,
                 R.anim.fragment_slide_left_exit,
                 R.anim.fragment_slide_right_enter,
-                R.anim.fragment_slide_right_exit);
+                R.anim.fragment_slide_right_exit);*/
         ft.replace(R.id.simple_fragment, newFragment);
         ft.addToBackStack(null);
         ft.commit();

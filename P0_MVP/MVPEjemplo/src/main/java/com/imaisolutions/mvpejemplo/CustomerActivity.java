@@ -1,9 +1,7 @@
 package com.imaisolutions.mvpejemplo;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +16,7 @@ public class CustomerActivity extends ActionBarActivity
     EditText txtApellidos;
     Button btnSave;
     CustomerPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
