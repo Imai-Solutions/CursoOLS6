@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/P27_ReconocerGestos.iml" filepath="$PROJECT_DIR$/P27_ReconocerGestos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconocerGestos/ReconocerGestos.iml" filepath="$PROJECT_DIR$/ReconocerGestos/ReconocerGestos.iml" />
+    </modules>
+  </component>
+</project>
+
