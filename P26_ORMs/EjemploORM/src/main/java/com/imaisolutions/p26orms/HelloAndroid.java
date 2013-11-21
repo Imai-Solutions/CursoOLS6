@@ -37,6 +37,7 @@ public class HelloAndroid extends OrmLiteBaseActivity<DatabaseHelper> {
 		RuntimeExceptionDao<SimpleData, Integer> simpleDao = getHelper().getSimpleDataDao();
 		// query for all of the data objects in the database
 		List<SimpleData> list = simpleDao.queryForAll();
+
 		// our string builder for building the content-view
 		StringBuilder sb = new StringBuilder();
 		sb.append("got ").append(list.size()).append(" entries in ").append(action).append("\n");
