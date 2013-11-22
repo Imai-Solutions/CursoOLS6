@@ -43,7 +43,7 @@ public class DataContentProvider extends ContentProvider {
 
 			MatrixCursor c = new MatrixCursor(new String[] {
 					BaseColumns._ID,
-					ColumnSchema.Aspect.Axes.COLUMN_AXIS_LABEL});
+            ColumnSchema.Aspect.Axes.COLUMN_AXIS_LABEL});
 
 			int row_index = 0;
 			for (int i=0; i<TemperatureData.DEMO_AXES_LABELS.length; i++) {

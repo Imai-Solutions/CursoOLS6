@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="ComAndroidSupportAppcompatV71900.aar" >
+        <source path="C:\Repositorios\GitHub2\CursoOLS6\P14_GoogleChartsProject\P14_GoogleCharts\build\exploded-bundles\ComAndroidSupportAppcompatV71900.aar\assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="C:\Repositorios\GitHub2\CursoOLS6\P14_GoogleChartsProject\P14_GoogleCharts\src\main\assets" >
+            <file
+                name="ejemplochart.html"
+                path="C:\Repositorios\GitHub2\CursoOLS6\P14_GoogleChartsProject\P14_GoogleCharts\src\main\assets\ejemplochart.html" />
+            <file
+                name="jsapi.js"
+                path="C:\Repositorios\GitHub2\CursoOLS6\P14_GoogleChartsProject\P14_GoogleCharts\src\main\assets\jsapi.js" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Repositorios\GitHub2\CursoOLS6\P14_GoogleChartsProject\P14_GoogleCharts\src\debug\assets" />
+    </dataSet>
+
+</merger>
