@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
         // ESTABLECEMOS EL MODO DE NAVEGACIÓN
         ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS)
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayShowTitleEnabled(true);
 
         // AÑADIR LOS TABS
