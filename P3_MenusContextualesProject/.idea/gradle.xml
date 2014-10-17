@@ -4,9 +4,10 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="C:\Repositorios" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
       </GradleProjectSettings>
     </option>
+    <option name="offlineWork" value="true" />
   </component>
 </project>
 
