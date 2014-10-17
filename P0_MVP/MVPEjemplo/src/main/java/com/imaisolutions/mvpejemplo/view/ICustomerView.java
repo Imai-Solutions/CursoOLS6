@@ -1,4 +1,4 @@
-package com.imaisolutions.mvpejemplo;
+package com.imaisolutions.mvpejemplo.view;
 
 import com.imaisolutions.mvpejemplo.model.entities.Customer;
 

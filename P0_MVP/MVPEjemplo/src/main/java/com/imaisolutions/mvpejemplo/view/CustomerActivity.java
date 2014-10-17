@@ -1,4 +1,4 @@
-package com.imaisolutions.mvpejemplo;
+package com.imaisolutions.mvpejemplo.view;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.imaisolutions.mvpejemplo.R;
 import com.imaisolutions.mvpejemplo.model.entities.Customer;
 import com.imaisolutions.mvpejemplo.presenter.CustomerPresenter;
 

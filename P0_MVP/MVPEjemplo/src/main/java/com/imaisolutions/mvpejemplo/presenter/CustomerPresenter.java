@@ -1,6 +1,6 @@
 package com.imaisolutions.mvpejemplo.presenter;
 
-import com.imaisolutions.mvpejemplo.ICustomerView;
+import com.imaisolutions.mvpejemplo.view.ICustomerView;
 import com.imaisolutions.mvpejemplo.model.CustomerModel;
 import com.imaisolutions.mvpejemplo.model.ICustomerModel;
 import com.imaisolutions.mvpejemplo.model.entities.Customer;
